@@ -63,7 +63,7 @@ body {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
-    background-color: var(--first-color-lighten);
+    background-color: #272525;
     color: var(--text-color);
     line-height: 1.6;
 }
@@ -96,10 +96,34 @@ img{
 /* CLASSES */
 
 .section {
-    padding: 4rem 0 2rem;
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+    background: #d1cbcb;
+    overflow: visible;
+    z-index: 1;
+}
+
+.section:before, .section:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    transform-origin: left top;
+    transform: skewY(-10deg);
+}
+
+.section:after {
+    bottom: 0;
+    transform-origin: left bottom;
+    transform: skewY(60deg);
 }
 
 .section-title{
+    position: relative;
     font-size: var(--h1-font-size) ;
     color: var(--first-color);
     margin-bottom: 2rem;
@@ -202,6 +226,12 @@ img{
 }
 
 /* HOME */
+.home{
+    background-color: #d1cbcb;
+    padding-bottom: 5rem;
+}
+
+
 .home__container{
     height: calc(100vh - var(--header-height));
     align-items: center;
@@ -257,6 +287,13 @@ img{
     background-color: var(--first-color-dark);
 }
 
+.home__button-div{
+    position: relative;
+    bottom: 65px;
+    width: 100%;
+    text-align: center;
+}
+
 .home__button{
     width: 60%;
 }
@@ -287,6 +324,10 @@ img{
 }
 
 /* ABOUT SECTION */
+.about{
+    background-color: #272525;
+}
+
 .about__container{
     row-gap: 2rem;
 }
@@ -297,6 +338,7 @@ img{
 
 .about__description{
     margin-bottom: var(--mb-4);
+    font-weight: bolder;
 }
 
 .about__img{
@@ -341,8 +383,13 @@ img{
 
 
 /* EDUCATION */
+.education{
+    background-color: #272525;
+}
+
 .education__container{
     row-gap: 2rem;
+    padding-bottom: 6rem;
 }
 
 .education__content{
@@ -358,8 +405,14 @@ img{
 
 .education__school{
     display: block;
+    position: relative;
+    left: 20%;
     font-size: var(--smaller-font-size);
 
+}
+
+.education__degree{
+    font-size: var(--smaller-font-size);
 }
 
 .education__year, .education__university{
@@ -402,10 +455,30 @@ img{
 }
 
 /* PROJECTS SECTION */
+.projects {
+    position: relative;
+    background-color: #d1cbcb;
+    padding-bottom: 6rem;
+    overflow: visible;
+    z-index: 1;
+}
+
+.projects:before, .projects:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    transform-origin: left top;
+    transform: skewY(-10deg);
+}
 
 .projects__container{
     justify-items: center;
     row-gap: 2rem;
+    padding-bottom: 6rem;
 }
 
 .projects__img{
@@ -462,6 +535,27 @@ img{
 
 
 /* CONTACT */
+
+.contact {
+    position: relative;
+    background-color: #272525;
+    overflow: visible;
+    z-index: 1;
+    padding-bottom: 1rem;
+}
+
+.contact:before, .contact:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    transform-origin: left top;
+    transform: skewY(-10deg);
+}
+
 .contact__container{
     row-gap: 3rem;
 
@@ -515,7 +609,7 @@ img{
 
 /* FOOTER */
 .footer{
-    background-color: var(--first-color-darken);
+    background-color: #d1cbcb;
     color: var(--first-color-lighten);
     text-align: center;
 }
@@ -565,6 +659,7 @@ img{
         width: var(--nav-width);
     }
 
+
     .about__container,
     .skills_container,
     .contact__container,
@@ -596,6 +691,12 @@ img{
         padding: 0 2rem;
     }
 
+    .education__school{
+        position: relative;
+        left: 60%;
+    
+    }
+
     .projects__title{
         margin-bottom: var(--mb-5);
     }
@@ -619,7 +720,7 @@ img{
     }
 
     .footer{
-        background-color: var(--first-color-darken);
+        background-color: #d1cbcb;
         padding: 3rem 0;
     }
 
@@ -657,8 +758,38 @@ img{
         margin-right: auto;
     }
 
+    .education__school{
+        display: block;
+        position: relative;
+        left: 30%;
+        font-size: var(--smaller-font-size);
+    
+    }
+
     .projects__container{
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .education, .about, .projects{
+        padding-bottom: 6rem;
+    }
+
+    .education__school{
+        display: block;
+        position: relative;
+        left: 60%;
+        font-size: var(--smaller-font-size);
+    
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+
+
+
+    .education, .about, .projects{
+        padding-bottom: 12rem;
     }
 
 }
