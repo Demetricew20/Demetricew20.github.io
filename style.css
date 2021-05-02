@@ -7,17 +7,17 @@
 
     --font-medium: 500;
     --font-semi-bold: 600;
-    --font-bold: 700;
+    --font-bold: bold;
 
-    --first-color: #CC4B2C;
-    --first-color-dark: #662616;
-    --first-color-darken: #290F09;
-    --text-color: #54423D;
+    --first-color: #00ADAE;
+    --first-color-dark: #06737b;
+    --first-color-darken: #075055;
+    --text-color: #a59c9c;
     --first-color-light: #EAE7E6;
     --first-color-lighten: #FFFAFA;
 
     --body-font: 'Raleway', sans-serif;
-    --h1-font-size: 1.5rem;
+    --h1-font-size: 3rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1rem;
     --normal-font-size: .938rem;
@@ -222,7 +222,7 @@ img{
 }
 
 .active{
-    color: var(--text-color)
+    color: var(fic)
 }
 
 /* HOME */
@@ -263,7 +263,7 @@ img{
 }
 
 .home__profession{
-    font-size: var(--small-font-size);
+    font-size: .9rem;
     color: var(--first-color-dark);
     margin-bottom: var(--mb-5);
 }
@@ -338,7 +338,17 @@ img{
 
 .about__description{
     margin-bottom: var(--mb-4);
-    font-weight: bolder;
+    cursor: default;
+    font-size: 22px;
+}
+
+.strong__text{
+    color: var(--first-color);
+    transition: .5s;
+}
+
+.strong__text:hover{
+    color: white;
 }
 
 .about__img{
@@ -381,10 +391,9 @@ img{
     font-size: var(--small-font-size);
 }
 
-
 /* EDUCATION */
 .education{
-    background-color: #272525;
+    background-color: #d1cbcb;
 }
 
 .education__container{
@@ -400,19 +409,21 @@ img{
 .education__year, .education__race {
     font-size: var(--h3-font-size);
     margin-bottom: .25rem;
-
+    color: var(--first-color-dark);
 }
 
 .education__school{
     display: block;
     position: relative;
-    left: 20%;
+    left: 30%;
     font-size: var(--smaller-font-size);
+    color: var(--first-color-dark);
 
 }
 
 .education__degree{
     font-size: var(--smaller-font-size);
+    color: var(--first-color-dark);
 }
 
 .education__year, .education__university{
@@ -430,7 +441,7 @@ img{
     display: inline-block;
     width: 12px;
     height: 12px;
-    background-color: var(--first-color);
+    background-color: var(--first-color-dark);
     border-radius: 50%;
 
 }
@@ -454,7 +465,44 @@ img{
 
 }
 
-/* PROJECTS SECTION */
+/* SKILLS */
+
+.skills{
+    background-color: #272525;
+}
+
+.skills__subtitle{
+    color: white;
+}
+
+.skills__container{
+    justify-items: center;
+}
+
+.skills__data{
+    text-align: center;
+}
+
+.skill__icon > i {
+    font-size: 2;
+}
+
+.icons__list{
+    display: inline-flex;
+    margin-bottom: 3rem;
+}
+
+
+
+
+
+.bxl-react, .bxl-javascript, .bxl-css3, .bxl-html5, .bxl-python, .bxl-django, .bxs-data, .bxl-git{
+    font-size: 80px;
+}
+
+
+
+/* PROJECTS */
 .projects {
     position: relative;
     background-color: #d1cbcb;
@@ -499,7 +547,7 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(204, 75, 44, .7);
+    background: rgba(15, 82, 95, 0.7);
     border-radius: .5rem;
     transition: .3s;
 }
@@ -517,7 +565,7 @@ img{
 
 .projects__title{
     display: block;
-    font-size: var(--h2-font-size);
+    font-size: var(--h1-font-size);
     font-weight: bolder;
     color: var(--first-color-lighten)
 }
@@ -525,6 +573,8 @@ img{
 .projects__description{
     display: none;
     color: var(--first-color-lighten);
+    font-size: var(--h3-font-size);
+    font-weight: bold;
     text-align: center;
     padding: 5px;
 }
@@ -604,7 +654,6 @@ img{
 
 .contact__text{
     display: flex;
-    padding-left: 1rem;
 }
 
 /* FOOTER */
@@ -650,6 +699,15 @@ img{
 }
 
 /* Media Queries */
+@media screen and (min-width: 550px){
+    .education__school{
+        position: relative;
+        left: 30%;
+    }
+
+}
+
+
 @media screen and (min-width: 768px){
     .home__button{
         width: initial;
@@ -694,7 +752,6 @@ img{
     .education__school{
         position: relative;
         left: 60%;
-    
     }
 
     .projects__title{
@@ -758,12 +815,29 @@ img{
         margin-right: auto;
     }
 
-    .education__school{
-        display: block;
+    .about > .section-title{
         position: relative;
-        left: 30%;
-        font-size: var(--smaller-font-size);
-    
+        bottom: 100px;
+    }
+
+    .contact > .section-title {
+        position: relative;
+        bottom: 50px;
+    }
+
+
+    .skills > .section-title, .skills__container{
+        position: relative;
+        bottom: 100px;
+    }
+
+    .skills__container{
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    .front__icon, .back__icon{
+        margin: 2rem 3rem 0 3rem;
     }
 
     .projects__container{
@@ -777,19 +851,17 @@ img{
     .education__school{
         display: block;
         position: relative;
-        left: 60%;
-        font-size: var(--smaller-font-size);
-    
+        left: 40%;
     }
 
 }
 
 @media screen and (min-width: 1200px){
-
-
-
     .education, .about, .projects{
         padding-bottom: 12rem;
     }
 
+    .education__school{
+        left: 60%;
+    }
 }
