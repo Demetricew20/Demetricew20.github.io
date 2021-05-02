@@ -53,8 +53,6 @@ clickEvent = ('click', () => {
     }else{
         projectData.style.opacity = "1";
     }
-    // projectLink.style.display = 'none';
-    // projectTitle.style.display = 'none';
 })
 
 clickEvent();
