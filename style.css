@@ -409,6 +409,7 @@ img{
 }
 
 .projects__img{
+    height: 100%;
     position: relative;
     overflow: hidden;
     border-radius: .5rem;
@@ -432,6 +433,7 @@ img{
 
 .projects__link{
     display: inline-flex;
+    margin: 10px;
     font-size: 1.5rem;
     background-color: var(--first-color-lighten);
     color: var(--first-color);
@@ -442,7 +444,15 @@ img{
 
 .projects__title{
     font-size: var(--h2-font-size);
+    font-weight: bolder;
     color: var(--first-color-lighten)
+}
+
+.projects__description{
+    display: none;
+    color: var(--first-color-lighten);
+    text-align: center;
+    padding: 5px;
 }
 
 .projects__data:hover {
@@ -555,7 +565,7 @@ img{
     .projects__container,
     .contact__container,
     .contact__input{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .about__data{
@@ -576,6 +586,15 @@ img{
 
     .education__time{
         padding: 0 2rem;
+    }
+
+    .projects__title{
+        margin-bottom: var(--mb-5);
+    }
+
+    .projects__description{
+        display: block;
+        margin-bottom: var(--mb-5);
     }
 
     .contact__input{
@@ -631,7 +650,7 @@ img{
     }
 
     .projects__container{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
 }
