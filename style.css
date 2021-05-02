@@ -443,6 +443,7 @@ img{
 }
 
 .projects__title{
+    display: block;
     font-size: var(--h2-font-size);
     font-weight: bolder;
     color: var(--first-color-lighten)

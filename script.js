@@ -1,4 +1,3 @@
-
 // ===== MENU ==== //
 const navMenu = document.getElementById('nav-menu'),
     toggleMenu = document.getElementById('nav-toggle'),
@@ -42,3 +41,25 @@ function scrollActive(){
         };
     });
 };
+
+// =====PROJECTS===== //
+
+function projectToggle(target){
+const projectData = document.getElementById(`projects${target}-data`),
+
+clickEvent = ('click', () => {
+    if (projectData.style.opacity != '0'){
+    projectData.style.opacity = '0';
+    }else{
+        projectData.style.opacity = "1";
+    }
+    // projectLink.style.display = 'none';
+    // projectTitle.style.display = 'none';
+})
+
+clickEvent();
+
+}
+
+
+
