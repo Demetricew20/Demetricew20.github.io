@@ -415,7 +415,7 @@ img {
 .education__school {
   display: block;
   position: relative;
-  left: 30%;
+  left: 25%;
   font-size: var(--smaller-font-size);
   color: var(--first-color-dark);
 }
@@ -709,10 +709,17 @@ img {
 }
 
 /* Media Queries */
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 380px) {
   .education__school {
     position: relative;
-    left: 30%;
+    left: 10%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .education__school {
+    position: relative;
+    left: 35%;
   }
 }
 
