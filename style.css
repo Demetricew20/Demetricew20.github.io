@@ -802,6 +802,10 @@ img {
     padding-left: var(--nav-width);
   }
 
+  .home{
+    margin-bottom: 10rem;
+  }
+
   .l-header {
     width: 0;
   }
