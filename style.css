@@ -873,6 +873,9 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
+  .home{
+    padding-bottom: 8rem;
+  }
   .education,
   .about,
   .projects {
