@@ -802,9 +802,6 @@ img {
     padding-left: var(--nav-width);
   }
 
-  .home{
-    margin-bottom: 10rem;
-  }
 
   .l-header {
     width: 0;
@@ -877,9 +874,6 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .home{
-    padding-bottom: 10rem;
-  }
   .education,
   .about,
   .projects {
