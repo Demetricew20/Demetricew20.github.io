@@ -233,7 +233,7 @@ img {
 /* HOME */
 .home {
   background-color: #d1cbcb;
-  padding-bottom: 6rem;
+  padding-bottom: 5rem;
 }
 
 .home__container {
@@ -801,7 +801,6 @@ img {
     margin: 0;
     padding-left: var(--nav-width);
   }
-
 
   .l-header {
     width: 0;
