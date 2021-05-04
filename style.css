@@ -233,7 +233,7 @@ img {
 /* HOME */
 .home {
   background-color: #d1cbcb;
-  padding-bottom: 5rem;
+  padding-bottom: 6rem;
 }
 
 .home__container {
@@ -874,7 +874,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .home{
-    padding-bottom: 8rem;
+    padding-bottom: 10rem;
   }
   .education,
   .about,
