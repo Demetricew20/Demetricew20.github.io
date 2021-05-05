@@ -288,13 +288,13 @@
             <div class="contact__container bd-grid">
                 <form action="https://formspree.io/f/xleaglgw" class="contact__form" id="contact-form" method='POST'>
                     <div class="contact_input">
-                        <input type="text" placeholder="Name" name="_name" class="contact__input">
-                        <input type="email" name="_replyto" placeholder="Email" class="contact__input">                        
+                        <input type="text" placeholder="Name" name="_name" class="contact__input" required>
+                        <input type="email" name="_replyto" placeholder="Email" class="contact__input" required >                        
                     </div>
 
                     <input type="text" name="_subject" placeholder="Subject" class="contact__input" >
                     
-                    <textarea name="message" cols="0" rows="10" placeholder="Message" class="contact__input"></textarea>
+                    <textarea name="message" cols="0" rows="10" placeholder="Message" class="contact__input" required></textarea>
 
                     <input type="submit" value="Send Message" class="button contact__button">
                     <p id="my-form-status"></p>
