@@ -561,7 +561,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(15, 82, 95, 0.7);
+  background: rgba(8, 59, 70, 0.7);
   border-radius: 0.5rem;
   transition: 0.3s;
 }
@@ -588,7 +588,7 @@ img {
   display: none;
   color: var(--first-color-lighten);
   font-size: var(--h3-font-size);
-  font-weight: bold;
+  font-weight: bolder;
   text-align: center;
   padding: 5px;
 }
