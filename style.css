@@ -497,7 +497,16 @@ img {
   transform: rotate(1080deg);
 }
 
-.back__icon > i:hover {
+.back__icon, .svg__icon{
+  margin-top: 1rem;
+}
+
+.svg__icon{
+  width: 80px;
+  position: relative;
+}
+
+.back__icon > i:hover, .svg__icon > img:hover {
   -webkit-animation: swing 1s ease;
   animation: swing 1s ease;
   -webkit-animation-iteration-count: 1;
@@ -514,6 +523,15 @@ img {
 .bxl-git {
   font-size: 80px;
 }
+
+.bxs-data:before, .bxl-git:before{
+  display: none;
+}
+
+.sql__text, .git__text{
+  display: none;
+}
+
 
 /* PROJECTS */
 .projects {
@@ -721,6 +739,14 @@ img {
     position: relative;
     left: 35%;
   }
+
+  .bxs-data:before, .bxl-git:before{
+    display: block;
+  }
+  
+  .sql__text, .git__text{
+    display: block;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -767,6 +793,12 @@ img {
     position: relative;
     left: 60%;
   }
+
+  .svg__icon{
+    margin-left: 1rem;
+  }
+
+
 
   .projects__title {
     margin-bottom: var(--mb-5);
@@ -850,9 +882,12 @@ img {
     margin-bottom: 4rem;
   }
 
-  .front__icon,
-  .back__icon {
+  .front__icon{
     margin: 2rem 3rem 0 3rem;
+  }
+
+  .back__icon, .svg__icon{
+    margin: 2rem 1rem 0 1rem;
   }
 
   .projects__container {
@@ -881,6 +916,10 @@ img {
 
   .education__school {
     left: 60%;
+  }
+
+  .back__icon, .svg__icon{
+    margin: 2rem 1rem 0 3rem;
   }
 }
 
