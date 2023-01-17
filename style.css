@@ -423,6 +423,8 @@ img {
 .education__degree {
   font-size: var(--smaller-font-size);
   color: var(--first-color-dark);
+  position: relative;
+  bottom: 3px;
 }
 
 .education__year,
@@ -975,3 +977,4 @@ img {
     transform: translateX(0);
   }
 }
+
