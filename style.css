@@ -669,8 +669,9 @@ img {
   cursor: pointer;
 }
 
-.phone__icon {
-  font-size: 30px;
+.email__icon, .phone__icon {
+  font-size: 24px;
+  margin-right: 7px;
 }
 
 .contact__info {
