@@ -227,7 +227,8 @@ img {
 }
 
 .active {
-  color: var(fic);
+  color: black;
+  font-weight: bold;
 }
 
 /* HOME */
@@ -565,6 +566,7 @@ img {
 
 .projects__img {
   height: 100%;
+  width: 100%;
   position: relative;
   overflow: hidden;
   border-radius: 0.5rem;
